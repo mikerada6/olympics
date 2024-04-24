@@ -8,8 +8,12 @@ import java.util.UUID;
 
 public interface TeamService {
     List<Team> getAllTeams();
+
     Optional<Team> getTeamById(UUID id);
+
     Team createTeam(Team event);
+
     Team updateTeam(UUID id, Team event);
+
     void deleteTeam(UUID id);
 }

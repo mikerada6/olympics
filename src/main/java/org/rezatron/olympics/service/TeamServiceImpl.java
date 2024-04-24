@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class TeamServiceImpl  implements TeamService {
+public class TeamServiceImpl implements TeamService {
 
     private final TeamRepository teamRepository;
 

@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Service
-public class GameServiceImpl  implements GameService {
+public class GameServiceImpl implements GameService {
 
     private final GameRepository gameRepository;
 
