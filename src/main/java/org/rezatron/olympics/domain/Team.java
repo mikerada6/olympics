@@ -1,7 +1,7 @@
 package org.rezatron.olympics.domain;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -10,8 +10,12 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.UUID;
 
-@Data
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
+@Getter
+@Setter
 @Table(name = "teams")
 public class Team {
     @Id
@@ -21,6 +25,7 @@ public class Team {
     private String name;
     private String logo;
 
+    @ToString.Exclude
     @OneToMany(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Score> scores = new LinkedHashSet<>();
 
